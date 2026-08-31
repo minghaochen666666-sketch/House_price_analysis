@@ -1,5 +1,5 @@
 select
-	floor(price / 100000) * 100000 as the_start,
+	floor(price / 5000) * 5000 as the_start,
     count(*) as houses
 from
 	 modified_data
