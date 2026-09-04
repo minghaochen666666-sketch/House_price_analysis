@@ -91,8 +91,6 @@ Correlation Analysis
 Statistical Reasoning
 Dashboard Development
 
-Citation
-Debayan Bandyopadhyay. (n.d.). House price prediction: Cleaned real estate dataset with engineered pricing metrics [Dataset]. https://www.kaggle.com/datasets/debayank2024/house-price-prediction/data
 
 Citation
 Debayan Bandyopadhyay. (n.d.). House price prediction: Cleaned real estate dataset with engineered pricing metrics [Dataset]. https://www.kaggle.com/datasets/debayank2024/house-price-prediction/data
