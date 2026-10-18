@@ -1,30 +1,90 @@
-House Price Analysis and Prediction
-Overview
+Project Overview
 
-This project analyzes approximately 4,600 residential property records from the Washington State housing market, spanning 44 cities and 77 zip codes, to identify factors that influence housing prices and unit prices (price per square foot).
+This project analyzes approximately 4,600 residential property records from the Washington State housing market, covering 44 cities and 77 zip codes, to identify key factors influencing housing prices and property values.
 
-The analysis explores market trends, evaluates housing characteristics through SQL-based analysis, visualizes patterns using Python, and presents key insights through an interactive Google Sheets dashboard. In addition, a Linear Regression model was developed to predict housing prices based on selected property attributes.
+The analysis combines SQL, Python, Excel, Power BI, and Machine Learning to explore housing market trends, examine relationships between property characteristics and prices, and develop a predictive model for house price estimation.
 
-This project combines:
+The project follows a complete data analytics workflow:
 
-MySQL for data querying, aggregation, and feature extraction
-Python (Pandas, Matplotlib, Seaborn, Scikit-Learn) for exploratory data analysis, visualization, and predictive modeling
-Google Sheets for KPI monitoring and dashboard reporting
-GitHub for project documentation and portfolio presentation
+SQL-based data exploration and aggregation
+Python-based exploratory data analysis (EDA)
+Machine learning price prediction using Linear Regression
+Excel dashboard development
+Power BI interactive reporting
+GitHub project documentation and portfolio presentation
+
+Tools and Technologies
+
+SQL (MySQL)
+
+Used for:
+
+Data exploration
+Data aggregation
+Feature analysis
+Statistical summaries
+Business-focused housing market queries
+
+Example analyses:
+
+Average house price
+Average price by city
+Average price by bedrooms
+Waterfront property analysis
+Property condition analysis
+Python
+
+Libraries Used:
+
+Pandas
+NumPy
+Matplotlib
+Seaborn
+Scikit-Learn
+
+Applications:
+
+Data validation
+Exploratory Data Analysis (EDA)
+Correlation analysis
+Visualization development
+Linear Regression modeling
+Model evaluation
+Microsoft Excel
+
+Used for:
+
+KPI dashboard development
+Pivot Tables
+Pivot Charts
+Interactive filtering and summarization
+Executive reporting
+
+Power BI
+
+Used for:
+
+Interactive dashboard reporting
+Geographic analysis
+Property characteristic analysis
+Machine learning performance visualization
+Data storytelling
 Dataset
 
-The dataset was obtained from the Kaggle House Prices dataset and contains residential property information, including categories such as:
+The dataset was obtained from the Kaggle House Prices Dataset and contains residential housing information including:
 
-Price,
-Bedrooms,
-Bathrooms,
-Sqft Living,
-Floors,
-Waterfront,
-View,
+Price
+Bedrooms
+Bathrooms
+Sqft Living
+Floors
+Waterfront
+View
 Condition
+Year Built
+City
 
-The dataset had already undergone preprocessing and required minimal cleaning. Data validation checks were performed to confirm its suitability for exploratory data analysis and predictive modeling.
+The dataset had already undergone preprocessing and required minimal cleaning. Validation checks were performed before conducting analysis and predictive modeling.
 
 Project Objectives
 
@@ -34,173 +94,167 @@ What is the overall distribution of house prices?
 How does living area affect housing prices?
 How does bedroom count impact property value?
 Do waterfront properties sell at higher prices?
-How does property view quality influence housing prices?
-Which housing characteristics have the strongest relationships with price?
-Can housing prices be predicted using a Linear Regression model?
-Tools and Technologies
-SQL (MySQL)
-
-Used for:
-
-Data exploration
-Feature selection
-Data aggregation
-Outlier identification
-Statistical analysis
-
-Example analyses:
-
-Average house price
-Price segmentation by value band
-Bedroom count analysis
-Waterfront property analysis
-View quality comparison
-Property condition analysis
-Python
-
-Libraries Used:
-
-Pandas
-Matplotlib
-Seaborn
-Scikit-Learn
-
-Applications:
-
-Data inspection
-Exploratory Data Analysis (EDA)
-Correlation analysis
-Histogram generation
-Scatter plot visualization
-Correlation heatmap generation
-Linear Regression modeling
-Model evaluation
-Google Sheets
-
-Used for:
-
-KPI reporting
-Dashboard design
-Summary tables
-Interactive visualization
+How does property condition affect housing value?
+How does view quality influence housing prices?
+Which housing characteristics are most associated with price?
+Can house prices be predicted using machine learning?
 Exploratory Data Analysis (EDA)
 
-Several visualizations were created to better understand housing market characteristics:
+Key analyses included:
 
 Price Distribution
+Distribution of housing prices
+Market concentration across price ranges
+Correlation Analysis
 
-Examined the overall distribution of house prices and identified market concentration across different price segments.
+Investigated relationships among:
 
-Correlation Heatmap
-
-Analyzed the relationships among:
-
-Price,
-Sqft Living,
-Bedrooms,
-Bathrooms,
-View,
-Floors,
-Waterfront,
+Price
+Sqft Living
+Bedrooms
+Bathrooms
+Waterfront
+View
+Floors
 Condition
-
-The heatmap helped identify the most relevant variables for predictive modeling.
-
 Living Area vs Price
 
-A scatter plot was used to investigate the relationship between house size and market value.
+Analyzed how living space influences housing value.
 
-Linear Regression Model
+Property Characteristics Analysis
 
-A Linear Regression model was developed to predict housing prices using the following features:
+Examined the effects of:
 
+Bedrooms
+Bathrooms
+Property condition
+Waterfront status
+View quality
+
+on house prices.
+
+Machine Learning Model
+Model
+
+Linear Regression
+
+Features
 Sqft Living
 Bedrooms
 Bathrooms
 View
-Model Evaluation
-
-Two versions of the model were evaluated:
-
-Original Dataset:	R^2:0.498, MAE:$172,957
-Outliers Removed Dataset	R^2:0.479, MAE:$153,754
+Evaluation Metrics
+Original Dataset
+R^2 = 0.498
+MAE = $172,957
+Outliers Removed Dataset
+R^2 = 0.479
+MAE = $153,754
 Performance Interpretation
-The original dataset achieved the highest R^2 score, explaining approximately 49.8% of the variation in housing prices.
-The outlier-removed dataset achieved a substantially lower MAE, reducing average prediction error by approximately $19,000.
-Removing extreme observations slightly reduced explanatory power but improved overall prediction accuracy for typical housing properties.
-Actual vs Predicted Analysis
 
-Actual and predicted housing prices were visualized to assess model performance and identify prediction patterns.
+The original dataset achieved the highest R² score, explaining approximately 49.8% of housing price variation.
+
+The outlier-removed dataset reduced the average prediction error by approximately $19,000, indicating improved performance for typical housing observations.
 
 Key Findings
 Housing Market Insights
-House prices are concentrated within the low-to-mid price range.
-Living area exhibits the strongest positive relationship with housing price.
-Bedroom count contributes to housing value but with a weaker effect than living area.
-Properties with better views generally command higher prices and higher prices per square foot.
-Houses with more floors tend to have higher unit prices.
-Waterfront properties are associated with higher total prices, larger living areas, and higher unit prices.
+House prices are concentrated in the low-to-mid price range.
+Living area shows the strongest positive relationship with housing price.
+Bedroom count positively affects housing value but less strongly than living area.
+Waterfront properties command significantly higher prices.
+Better views are associated with higher housing values.
+Houses with more floors generally have higher unit prices.
 These findings represent correlations rather than causal relationships.
 Predictive Modeling Insights
-Property view contributes additional predictive information beyond basic housing characteristics.
-Outlier removal improves prediction accuracy for typical observations.
-Linear Regression provides a useful baseline model for housing price estimation.
-Dashboard
+View quality adds predictive value beyond basic housing characteristics.
+Removing extreme observations improves prediction accuracy.
+Linear Regression provides a useful baseline housing price prediction model.
 
-The Google Sheets dashboard includes the following components:
+Dashboards
 
-Key Performance Indicators (KPIs)
+Excel Dashboard
+
+KPIs
 Average House Price
 Maximum House Price
 Total Properties Analyzed
 Average Living Area
 Visualizations
 House Price Distribution
-Living Area vs Sale Price
-Bedroom Analysis
-Average Price by View Level
-Average Price by Number of Floors
-Average Price by Property Condition
-Correlation Heatmap
+Price by Bedrooms
+Price by Waterfront
+Price by Property Condition
+Price by View Quality
+Pivot Table Analysis
 
-The dashboard summarizes key housing market trends and highlights factors associated with property values.
+
+Power BI Dashboard
+
+Page 1: Market Overview
+
+KPI Cards
+House Price Distribution
+Market Summary Statistics
+
+Page 2: Property Characteristics
+
+Bedrooms vs Average Price
+Bathrooms vs Average Price
+Sqft Living vs Price
+Waterfront Analysis
+Condition Analysis
+
+Page 3: Geographic Analysis
+
+City-Level Price Comparison
+Geographic Housing Insights
+Map-Based Analysis
+
+Page 4: ML Prediction Insights
+
+R^2 Card
+RMSE Card
+MAE Card
+Actual vs Predicted Scatter Plot
+
+Skills Demonstrated
+
+Technical Skills
+
+SQL (MySQL)
+Python
+Pandas
+NumPy
+Matplotlib
+Seaborn
+Scikit-Learn
+Microsoft Excel
+Power BI
+Git
+GitHub
+Data Analytics Skills
+Exploratory Data Analysis (EDA)
+Data Aggregation
+Data Visualization
+Dashboard Development
+Correlation Analysis
+Statistical Reasoning
+Predictive Modeling
+Feature Selection
+Linear Regression
+Model Evaluation (R^2, RMSE, MAE)
+Business Intelligence Reporting
 
 Future Improvements
 
-Potential extensions for this project include:
-
-Multiple Linear Regression with additional features
+Multiple Linear Regression
 Random Forest Regression
-Gradient Boosting Models (XGBoost)
+XGBoost Models
 Advanced Feature Engineering
-Cross-Validation for model evaluation
-Geographic analysis using latitude and longitude
-Power BI dashboard development
-Tableau dashboard development
-Skills Demonstrated
-Technical Skills
-SQL (MySQL),
-Python,
-Pandas,
-Matplotlib,
-Seaborn,
-Scikit-Learn,
-Google Sheets,
-Git,
-GitHub
-
-Data Analytics Skills
-Exploratory Data Analysis (EDA),
-Data Aggregation,
-Correlation Analysis,
-Statistical Reasoning,
-Predictive Modeling,
-Feature Selection,
-Linear Regression,
-Model Evaluation (R^2 and MAE),
-Dashboard Development,
-Data Storytelling
-
+Cross-Validation
+Geographic Modeling Using Coordinates
+Feature Importance Analysis
+Interactive Web Dashboard Deployment
 
 Citation
 Debayan Bandyopadhyay. (n.d.). House price prediction: Cleaned real estate dataset with engineered pricing metrics [Dataset]. https://www.kaggle.com/datasets/debayank2024/house-price-prediction/data
